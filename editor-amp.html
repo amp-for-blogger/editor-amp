@@ -21,15 +21,126 @@ body {
     text-align: left;
     max-width: 1006px;
 }
+/* Imagen de portada */
 
+#static-image {
+    background-image: url(https://3.bp.blogspot.com/-IRmii_C2OUM/WLyqd-0vPVI/AAAAAAAAADw/I4l79QmBjfMkzcArPbl_0Tilwq8IpMzDgCLcB/s1600/quienes-somos.jpg);
+    padding-bottom: 0;
+    padding-top: 0;
+padding: 20vh 0;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#static-image p {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+font-size: 30px;
+ 
+}
+#static-image h1 {
+  color: white;
+clear: both;
+font-size: 40px;
+margin-top: 30px;
+margin-bottom: 50px;
+font-weight: 600;
+color: #dfdfdf;
+line-height: 50px;
+ 
+}
+
+.section2{
+    display: block;
+}
+
+
+.section-image-static .container {
+    z-index: 2;
+    position: relative;
+}
+
+.section-image-static:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: &quot;&quot;;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.section-image-static .title2 {
+    color: #FFFFFF;
+}
+
+  .contenido-static{
+
+}
+
+@media screen and (max-width:768px){
+
+#static-image {
+padding: 7vh 0;
+    }
+
+.contenido-static {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+}
+
+
+@media screen and (max-width:480px){
+
+#static-image {
+padding: 7vh 0;
+    }
+
+.contenido-static {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+}
+
+/* Fin imagen de portada */
+.container{position:relative;margin-left:auto;margin-right:auto;padding-right:15px;padding-left:15px; overflow: hidden;}@media (min-width:576px){.container{padding-right:15px;padding-left:15px}}@media (min-width:768px){.container{padding-right:15px;padding-left:15px}}@media (min-width:992px){.container{padding-right:15px;padding-left:15px}}@media (min-width:1200px){.container{padding-right:15px;padding-left:15px}}@media (min-width:576px){.container{width:540px;max-width:100%}}@media (min-width:768px){.container{width:720px;max-width:100%}}@media (min-width:992px){.container{width:960px;max-width:100%}}@media (min-width:1200px){.container{width:1140px;max-width:100%}}
 </style>
 </head>
 <body>
+  <section class='section2 section-image-static' id='static-image'>
+
+      <div class='contenido-static'>
+
+
+<div class='container'>
+                
+     <center>
+    <h1>Editor AMP html</h1>
+</center>
+<br/>
+<br/>
+<p><b>Editor AMP html</b>  An <a href="https://www.ampproject.org/">AMP HTML</a> editor written in JavaScript based on the original HTMLjive editor from 1996. <b><i>(Save this page as a file.  Then load it whenever you need an AMP HTML editor.)</i></b></p>
+
+  </div>
+
+</div>
+
+    </section>
+
+  
   
 <div id="outer-wrapper">
-  
-<h1>Editor AMP html</h1>
-<p><b>Editor AMP html</b>  An <a href="https://www.ampproject.org/">AMP HTML</a> editor written in JavaScript based on the original HTMLjive editor from 1996. <b><i>(Save this page as a file.  Then load it whenever you need an AMP HTML editor.)</i></b></p>
+ <div class="container"> 
 <hr>
 <form method="post" action="">
 <script language="JavaScript">
@@ -352,7 +463,7 @@ function preview(form) {
 </form>
 <p>Copyright </p>
 <p>Open sourced at <a href="https://www.ayudadeblogger.com/">https://www.ayudadeblogger.com/</a>
-  
+  </div>
   </div>
   
 </body>
