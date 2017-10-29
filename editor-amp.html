@@ -4,10 +4,28 @@
 <title>Editor AMP html basado en el original HTMLjive editor de 1996</title>
   <meta content='width=device-width, initial-scale=1' name='viewport'>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
+<style>
+body {
+    background: linear-gradient(to right, rgba(3,137,255,0.05), rgba(13,211,255,0.05));
+    color: #555555;
+    font-family: 'Roboto Slab',Arial,Helvetica,Sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  #outer-wrapper {
+    width: 100%;
+    margin: 0 auto 0;
+    padding: 0;
+    text-align: left;
+    max-width: 1006px;
+}
+}
+</style>
 </head>
-<body background: linear-gradient(to right, rgba(3,137,255,0.05), rgba(13,211,255,0.05));>
+<body>
+<div id="outer-wrapper">
+  
 <h1>Editor AMP html</h1>
 <p><b>Editor AMP html</b>  An <a href="https://www.ampproject.org/">AMP HTML</a> editor written in JavaScript based on the original HTMLjive editor from 1996. <b><i>(Save this page as a file.  Then load it whenever you need an AMP HTML editor.)</i></b></p>
 <hr>
@@ -116,8 +134,8 @@ jImage.sampletext3="88"
 
 jAnchor = new HTMLtag ("Anchor", 5, "Enter the URL (e.g., https://www.google.com.ec)", ' <a href="', '"> ', '</a>',
   "https://www.google.com.ec", "Google (description here)",
-  "Enter the URL (e.g., https://www.google.com/doodles) followed by the description." )
-jAnchor.inserttext2 = "Enter description (e.g., Yahoo)"
+  "Enter the URL (Ejemplo, https://www.google.com/doodles) followed by the description." )
+jAnchor.inserttext2 = "Ingrese la descripción (Ejemplo, Hola)"
 
 function About (form) {
   alert('https://www.ayudadeblogger.com/')
@@ -332,5 +350,8 @@ function preview(form) {
 </form>
 <p>Copyright </p>
 <p>Open sourced at <a href="https://www.ayudadeblogger.com/">https://www.ayudadeblogger.com/</a>
+  
+  </div>
+  
 </body>
 </html>
