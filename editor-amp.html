@@ -96,27 +96,27 @@ jDD = new HTMLtag ( "DD", "2", "Enter definition for a DEFINITION LIST", " <DD>"
 
 
 
-jImage = new HTMLtag ("Image", 6, "Enter the URL (e.g., ejemplo.png)", ' <amp-img layout="responsive" src="', '" height="', '"></amp-img>', "http://www.yahoo.com", "44", "Enter the URL followed by the height and width." )
-jImage.inserttext2 = "Enter height in px"
-jImage.sample = "Enter width in px"
+jImage = new HTMLtag ("Image", 6, "Ingrese la URL (e.g., ejemplo.png)", ' <amp-img layout="responsive" src="', '" height="', '"></amp-img>', "https://www.google.com.ec", "44", "Enter the URL followed by the height and width." )
+jImage.inserttext2 = "Tamaño de altura height en px"
+jImage.sample = "Tamaño de anchura width en px"
 jImage.tagmiddle2='" width="'
 jImage.sampletext3="88"
   
-jImage = new HTMLtag ("Image", 7, "Enter the URL (e.g., ejemplo.png)", ' <amp-img src="', '" height="', '"></amp-img>', "http://www.yahoo.com", "44", "Enter the URL followed by the height and width." )
-jImage.inserttext2 = "Enter height in px"
-jImage.sample = "Enter width in px"
+jImage = new HTMLtag ("Image", 7, "Ingrese la URL (e.g., ejemplo.png)", ' <center> <amp-img src="', '" height="', '"></amp-img><center>', "https://www.google.com.ec", "44", "Enter the URL followed by the height and width." )
+jImage.inserttext2 = "Tamaño de altura en px"
+jImage.sample = "Tamaño de anchura en px"
 jImage.tagmiddle2='" width="'
 jImage.sampletext3="88"  
 
 // jAnimated = new HTMLtag ("Animated", 2, "Enter the URL (e.g., sample.gif)", ' <AMP-ANIM SRC="', "", '"></AMP-ANIM>', "URL to image (e.g. sample.gif)" , "", "Enter the URL for the image (e.g., sample.gif)" )
 
-jAnchor = new HTMLtag ("Anchor", 5, "Enter the URL (e.g., http://www.yahoo.com)", ' <a href="', '"> ', '</a>',
-  "http://www.yahoo.com", "Yahoo (description here)",
-  "Enter the URL (e.g., http://www.yahoo.com/index.html) followed by the description." )
+jAnchor = new HTMLtag ("Anchor", 5, "Enter the URL (e.g., https://www.google.com.ec)", ' <a href="', '"> ', '</a>',
+  "https://www.google.com.ec", "Google (description here)",
+  "Enter the URL (e.g., https://www.google.com/doodles) followed by the description." )
 jAnchor.inserttext2 = "Enter description (e.g., Yahoo)"
 
 function About (form) {
-  alert('Beta AMPjive (C) 2015, 1996 Ray Daly www.raydaly.com/AMPjive/')
+  alert('https://www.ayudadeblogger.com/')
 }
 function Save (form) {
   alert('No SAVE function is available.  You must "cut & paste" your document into another application.')
@@ -317,7 +317,6 @@ function preview(form) {
         <td align="center">
           <input value=" Image " onClick="HjButton(this.form,jImage)" type="button">
         </td>
-        <td align="center"><input value="     Center     " onClick="HjButton(this.form,jCenter)" type="button">
         </td>
       </tr>
     </tbody>
