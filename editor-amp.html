@@ -31,8 +31,8 @@ function HTMLtag (buttonname, insertmode, inserttext, tagstart, tagmiddle, tagen
   this.helptext   = helptext
 }
 
-jStart = new HTMLtag ("Start", 5, "Enter the document TITLE (e.g., My AMPjive Page)", '<!doctype html><HTML amp lang="en"><HEAD><META charset="utf-8"><TITLE>', '</TITLE><LINK rel="canonical" href="', '" /><META name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><STYLE>body {opacity: 0}</STYLE><noscript><STYLE>body {opacity: 1}</STYLE></noscript><SCRIPT async src="https://cdn.ampproject.org/v0.js"><\/SCRIPT></HEAD><BODY>',"My AMPjive Page", "http://raydaly.com/ampjive/","Enter the Title followed by the cononical URL (e.g., http://raydaly.com/ampjive/)" )
-jStart.inserttext2 = "Enter canonical URL  (e.g., https://raydaly.com/ampjive/)"
+jStart = new HTMLtag ("Start", 5, "Enter the document TITLE (e.g., My AMP HTML Page)", '<!doctype html><HTML amp lang="en"><HEAD><META charset="utf-8"><TITLE>', '</TITLE><LINK rel="canonical" href="', '" /><META name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><STYLE>body {opacity: 0}</STYLE><noscript><STYLE>body {opacity: 1}</STYLE></noscript><SCRIPT async src="https://cdn.ampproject.org/v0.js"><\/SCRIPT></HEAD><BODY>',"My AMP HTML Page", "https://ayudadeblogger.com/amp/","Enter the Title followed by the cononical URL (e.g., https://ayudadeblogger.com/amp/)" )
+jStart.inserttext2 = "Enter canonical URL  (e.g., https://ayudadeblogger/amp/)"
 
 
 jEnd = new HTMLtag ( "End", "1", "", " </BODY></HTML>", "", "",
@@ -96,11 +96,17 @@ jDD = new HTMLtag ( "DD", "2", "Enter definition for a DEFINITION LIST", " <DD>"
 
 
 
-jImage = new HTMLtag ("Image", 6, "Enter the URL (e.g., sample.png)", ' <amp-img layout="responsive" src="', '" height="', '"></amp-img>', "http://www.yahoo.com", "44", "Enter the URL followed by the height and width." )
+jImage = new HTMLtag ("Image", 6, "Enter the URL (e.g., ejemplo.png)", ' <amp-img layout="responsive" src="', '" height="', '"></amp-img>', "http://www.yahoo.com", "44", "Enter the URL followed by the height and width." )
 jImage.inserttext2 = "Enter height in px"
 jImage.sample = "Enter width in px"
 jImage.tagmiddle2='" width="'
 jImage.sampletext3="88"
+  
+jImage = new HTMLtag ("Image", 7, "Enter the URL (e.g., ejemplo.png)", ' <amp-img src="', '" height="', '"></amp-img>', "http://www.yahoo.com", "44", "Enter the URL followed by the height and width." )
+jImage.inserttext2 = "Enter height in px"
+jImage.sample = "Enter width in px"
+jImage.tagmiddle2='" width="'
+jImage.sampletext3="88"  
 
 // jAnimated = new HTMLtag ("Animated", 2, "Enter the URL (e.g., sample.gif)", ' <AMP-ANIM SRC="', "", '"></AMP-ANIM>', "URL to image (e.g. sample.gif)" , "", "Enter the URL for the image (e.g., sample.gif)" )
 
@@ -211,7 +217,7 @@ function addHTMLinsert (selection, addText, form) {
       }
     }
   }
-  if (selection.insertmode == 6) {  // ...Image
+  if (selection.insertmode == 6) {  // ...Image responsive
     addText = ""
     i = ""
     i = prompt (selection.inserttext, "")
@@ -225,6 +231,21 @@ function addHTMLinsert (selection, addText, form) {
       }
     }
   }
+   if (selection.insertmode == 7) {  // ...Image
+    addText = ""
+    i = ""
+    i = prompt (selection.inserttext, "")
+    if ((i != null) && (i != "")) {
+      j = ""
+      j=prompt (selection.inserttext2, "")
+      if ((j != null) && (j != "")) {
+        k = ""
+        k=prompt (selection.sample, "")
+        addText=i + selection.tagmiddle + j + selection.tagmiddle2 +k
+      }
+    }
+  }
+  
   return addText
 }
 
@@ -287,6 +308,11 @@ function preview(form) {
           <input value=" HR " onClick="HjButton(this.form,jRule)" type="button">
         </td>
         <td align="center"><input value="    Anchor     " onClick="HjButton(this.form,jAnchor)" type="button">
+        </td>
+        <td align="center">
+          <input value=" Image responsive " onClick="HjButton(this.form,jImage)" type="button">
+        </td>
+        <td align="center"><input value="     Center     " onClick="HjButton(this.form,jCenter)" type="button">
         </td>
         <td align="center">
           <input value=" Image " onClick="HjButton(this.form,jImage)" type="button">
