@@ -25,7 +25,6 @@ body {
 
 input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
     text-align: center;
-    cursor: default;
     color: #fff;
     background-color: cornflowerblue;
     box-sizing: border-box;
@@ -36,7 +35,9 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border-image: initial;
     padding: 12px;
     border-radius: 4px;
-   box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+    margin-bottom: 6px;
+    cursor: pointer;
 }  
   
 .txt-1   {
@@ -46,10 +47,19 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     border-radius: 4px;
     box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
 }
-  .txt-2{
-  padding: 12px;
-  
-  }
+  .txt-2 {
+    padding: 10px 0;
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+}
+  a {
+    text-decoration: none;
+    color: currentColor;
+}
+  table {
+    margin-bottom: 6px;
+}
   </style>
 </head>
 <body>
@@ -344,7 +354,7 @@ function preview(form) {
       </tr>
       <tr>
         <td><input value="strong" onClick="HjButton(this.form,jStrong)" type="button">
-          <input value="Em" onClick="HjButton(this.form,jEm)" type="button">
+          <input value="em" onClick="HjButton(this.form,jEm)" type="button">
           <input value=" pre " onClick="HjButton(this.form,jPre)" type="button">
         </td>
         <td><input value=" h1 " onClick="HjButton(this.form,jH1)" type="button">
@@ -359,21 +369,21 @@ function preview(form) {
           <input value=" dt " onClick="HjButton(this.form,jDT)" type="button">
           <input value=" dd " onClick="HjButton(this.form,jDD)" type="button">
           <br></td>
-      </tr>
-      <tr>
         <td align="center"><input value=" p " onClick="HjButton(this.form,jPara)" type="button">
           <input value=" br " onClick="HjButton(this.form,jBreak)" type="button">
           <input value=" hr " onClick="HjButton(this.form,jRule)" type="button">
         </td>
         <td align="center"><input value="    Enlace     " onClick="HjButton(this.form,jAnchor)" type="button">
         </td>
-        <td align="center">
+      </tr>
+      <tr>
+            <td align="center">
           <input value=" Imagen responsive " onClick="HjButton(this.form,jImage)" type="button">
         </td>
-        <td align="center"><input value="     Center     " onClick="HjButton(this.form,jCenter)" type="button">
+         <td align="center">
+          <input value=" Imagen small " onClick="HjButton(this.form,jImage)" type="button">
         </td>
-        <td align="center">
-          <input value=" Imagen " onClick="HjButton(this.form,jImage)" type="button">
+        <td align="center"><input value="     Center     " onClick="HjButton(this.form,jCenter)" type="button">
         </td>
         </td>
       </tr>
