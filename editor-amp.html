@@ -60,6 +60,23 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
   table {
     margin-bottom: 6px;
 }
+  
+  input {
+    text-align: center;
+    color: #fff;
+    background-color: cornflowerblue;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 0px;
+    border-style: none;
+    border-color: blue;
+    border-image: initial;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+    margin-bottom: 6px;
+    cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -162,7 +179,9 @@ jDD = new HTMLtag ( "DD", "2", "Enter definition for a DEFINITION LIST", " <dd>"
   "This is definition in a DEFINITION LIST", "" ,
   "The text placed between the <DD> and the </DD> will one item in a LIST.  Requires DL." )
 
-
+jItalics = new HTMLtag ( "I", "2", "Enter the text to be ITALICIZED", " <i>", "", "</i>",
+	"This will be in italics", "" ,
+	"The text placed between the <i> and the </i> will be ITALICIZED" )  
 
 jImage = new HTMLtag ("Image", 6, "Ingrese la URL (e.g., ejemplo.png)", ' <amp-img layout="responsive" src="', '" height="', '"></amp-img>', "https://4.bp.blogspot.com/-hGBmuFulDRw/WeAlhQKnkBI/AAAAAAAATYc/8HUrKY-C6FoXU_13aVDsiomy26ZTiCUbACLcBGAs/s300/plantilla-de-blogger-en-amp-html-gratis.jpg", "172", "Enter the URL followed by the height and width." )
 jImage.inserttext2 = "Tamaño de altura height en px"
@@ -355,6 +374,7 @@ function preview(form) {
       <tr>
         <td><input value="strong" onClick="HjButton(this.form,jStrong)" type="button">
           <input value="em" onClick="HjButton(this.form,jEm)" type="button">
+          <input value=" i " onClick="HjButton(this.form,jItalics)" type="button">
           <input value=" pre " onClick="HjButton(this.form,jPre)" type="button">
         </td>
         <td><input value=" h1 " onClick="HjButton(this.form,jH1)" type="button">
@@ -373,10 +393,10 @@ function preview(form) {
           <input value=" br " onClick="HjButton(this.form,jBreak)" type="button">
           <input value=" hr " onClick="HjButton(this.form,jRule)" type="button">
         </td>
+        </tr>
+      <tr>
         <td align="center"><input value="    Enlace     " onClick="HjButton(this.form,jAnchor)" type="button">
         </td>
-      </tr>
-      <tr>
             <td align="center">
           <input value=" Imagen responsive " onClick="HjButton(this.form,jImage)" type="button">
         </td>
