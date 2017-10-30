@@ -182,6 +182,10 @@ jDD = new HTMLtag ( "DD", "2", "Enter definition for a DEFINITION LIST", " <dd>"
 jItalics = new HTMLtag ( "I", "2", "Enter the text to be ITALICIZED", " <i>", "", "</i>",
 	"This will be in italics", "" ,
 	"The text placed between the <i> and the </i> will be ITALICIZED" )  
+	
+jsubraya = new HTMLtag ( "U", "2", "Enter the text to be Subraya", " <u>", "", "</u>",
+	"This will be in Subraya", "" ,
+	"The text placed between the <u> and the </u> will be Subraya" )  	
 
 jImage = new HTMLtag ("Image", 6, "Ingrese la URL (e.g., ejemplo.png)", ' <amp-img layout="responsive" src="', '" height="', '"></amp-img>', "https://4.bp.blogspot.com/-hGBmuFulDRw/WeAlhQKnkBI/AAAAAAAATYc/8HUrKY-C6FoXU_13aVDsiomy26ZTiCUbACLcBGAs/s300/plantilla-de-blogger-en-amp-html-gratis.jpg", "172", "Enter the URL followed by the height and width." )
 jImage.inserttext2 = "Tamaño de altura height en px"
@@ -374,7 +378,8 @@ function preview(form) {
       <tr>
         <td><input value="strong" onClick="HjButton(this.form,jStrong)" type="button">
           <input value="em" onClick="HjButton(this.form,jEm)" type="button">
-          <input value=" i " onClick="HjButton(this.form,jItalics)" type="button">
+          <input value=" Cursiva " onClick="HjButton(this.form,jItalics)" type="button">
+	 <input value=" Subraya " onClick="HjButton(this.form,jsubraya)" type="button">
           <input value=" pre " onClick="HjButton(this.form,jPre)" type="button">
         </td>
         <td><input value=" h1 " onClick="HjButton(this.form,jH1)" type="button">
